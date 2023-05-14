@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, {useState} from "react";
-import {AiOutlineClose, AiOutlineMail, AiOutlineMan, AiOutlineMenu} from "react-icons/ai"
+import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from "react-icons/ai"
 import {FaGithub, FaLinkedinIn} from "react-icons/fa"
 import {BsFillPersonLinesFill} from "react-icons/bs"
+import { ImagesCommon } from "@/const/Images";
 
 const NavBar = () => {
     const [nav, setNav] = useState(false)
@@ -17,7 +18,7 @@ const NavBar = () => {
         <div className="fixed w-full h-30 shadow-xl z-[100]">
             <div className="flex justify-between items-center w-full h-full px-2xl:px-16">
                 <Image
-                    src="/../public/assets/logo.png"
+                    src={ImagesCommon.logo}
                     alt="/"
                     width="125"
                     height="50"
@@ -53,7 +54,7 @@ const NavBar = () => {
                                 }>
                     <div>
                         <div className="flex w-full items-center justify-between">
-                            <Image  src="/../public/assets/logo.png"
+                            <Image  src={ImagesCommon.logo}
                                     alt="/"
                                     width="87"
                                     height="35"
