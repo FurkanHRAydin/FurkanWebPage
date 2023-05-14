@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, {useState} from "react";
-import {AiOutlineClose, AiOutlineMail, AiOutlineMan, AiOutlineMenu} from 'react-icons/ai'
-import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
+import {AiOutlineClose, AiOutlineMail, AiOutlineMan, AiOutlineMenu} from "react-icons/ai"
+import {FaGithub, FaLinkedinIn} from "react-icons/fa"
+import {BsFillPersonLinesFill} from "react-icons/bs"
 
 const NavBar = () => {
     const [nav, setNav] = useState(false)
@@ -19,8 +19,8 @@ const NavBar = () => {
                 <Image
                     src="/../public/assets/logo.png"
                     alt="/"
-                    width='125'
-                    height='50'
+                    width="125"
+                    height="50"
                 />
                 <div>
                     <ul className="hidden md:flex mr-3 uppercase">
@@ -46,7 +46,7 @@ const NavBar = () => {
                 </div>
             </div>
 
-            <div className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ''}>
+            <div className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
                 <div className={nav 
                                     ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-10 ease-in duration-500" 
                                     : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
@@ -55,8 +55,8 @@ const NavBar = () => {
                         <div className="flex w-full items-center justify-between">
                             <Image  src="/../public/assets/logo.png"
                                     alt="/"
-                                    width='87'
-                                    height='35'
+                                    width="87"
+                                    height="35"
                             />
                             <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
                                 <AiOutlineClose/>
@@ -85,7 +85,7 @@ const NavBar = () => {
                             </Link>
                         </ul>
                         <div className="pt-40">
-                            <p className="uppercase tracking-widest text-[#5651e5]"> Lets Connect</p>
+                            <p className="uppercase tracking-widest text-[#5651e5]">Lets Connect</p>
                             <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                                     <FaLinkedinIn/>
