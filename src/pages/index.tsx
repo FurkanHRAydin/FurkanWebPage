@@ -3,6 +3,7 @@ import Head from 'next/head'
 import NavBar from './component/NavBar'
 import Main from './component/Main'
 import About from './component/About'
+import Skills from './component/skills/Skills'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function Home() {
       <NavBar/>
       <Main/>
       <About/>
+      <Skills/>
     </div>
   )
 }
