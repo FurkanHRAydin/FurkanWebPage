@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { SkillsCardProps } from "@/models/SkillsCardProps"
+import { SkillsCardProps } from "@/models/props/SkillsCardProps"
 const SkillsCard = ({src, alt, title}: SkillsCardProps) => {
     return (
         <div className='p-6 shadow-xl shadow-gray-400 rounded-xl hover:scale-105 ease-in duration-300'>
