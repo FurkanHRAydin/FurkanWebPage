@@ -5,7 +5,6 @@ export type Project = {
   title: string;
   technologyMain: string;
   description: string;
-  codeUrl: string;
   demoUrl: string;
   technologyAll: string[];
 };
