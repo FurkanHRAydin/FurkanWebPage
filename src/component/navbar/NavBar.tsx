@@ -2,10 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React, {useState, useEffect} from "react";
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from "react-icons/ai"
-import {FaGithub, FaLinkedinIn} from "react-icons/fa"
-import {BsFillPersonLinesFill} from "react-icons/bs"
 import { ImagesCommon } from "@/const/Images";
 import { useRouter } from "next/router";
+import SocialButton from "../SocialButton";
 
 const NavBar = () => {
     const [nav, setNav] = useState(false)
@@ -45,7 +44,7 @@ const NavBar = () => {
         style={{backgroundColor: `${navBg}`}}
          className={shadow ? "fixed w-full h-30 shadow-xl z-[100]": "fixed w-full h-30 z-[100]"}>
             <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-                <Link href='/'>
+                <Link href='/#main' scroll={false}>
                 <Image
                     src={ImagesCommon.logo}
                     alt="/"
@@ -55,7 +54,7 @@ const NavBar = () => {
                 </Link>
                 <div>
                     <ul style={{color: `${linkColor}`}} className="hidden md:flex mr-3 uppercase">
-                        <Link href="/" scroll={false}>
+                        <Link href="/#main" scroll={false}>
                             <li className="ml-10 text-sm hover:border-b">Home</li>
                         </Link>
                         <Link href="/#about" scroll={false}>
@@ -84,7 +83,7 @@ const NavBar = () => {
                                 }>
                     <div>
                         <div className="flex w-full items-center justify-between">
-                            <Link href='/'>
+                            <Link href='/#main' scroll={false} onClick={()=> setNav(false)}>
 
                                 <Image  src={ImagesCommon.logo}
                                         alt="/"
@@ -103,7 +102,7 @@ const NavBar = () => {
                     </div>
                     <div className="py-4 flex flex-col">
                         <ul className="uppercase">
-                            <Link href="/" scroll={false}>
+                            <Link href="/#main" scroll={false}>
                                 <li onClick={()=> setNav(false)} className="py-4 text-sm">Home</li>
                             </Link>
                             <Link href="/#about" scroll={false}>
@@ -121,20 +120,7 @@ const NavBar = () => {
                         </ul>
                         <div className="pt-40">
                             <p className="uppercase tracking-widest text-[#5651e5]">Let&apos;s Connect</p>
-                            <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                                    <FaLinkedinIn/>
-                                </div>
-                                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                                    <FaGithub/>
-                                </div>
-                                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                                    <AiOutlineMail />
-                                </div>
-                                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                                    <BsFillPersonLinesFill/>
-                                </div>
-                            </div>
+                            <SocialButton/>
                         </div>
                     </div>
 

@@ -39,7 +39,6 @@ const theWorldHardestGame = () => {
                             </p>
                         ))}
                     </div>
-
                 </div>
             </div>
             <Link href='/#projects'>
