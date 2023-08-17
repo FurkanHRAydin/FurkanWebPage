@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectsCard from './ProjectsCard';
 import {
   ChessScene,
-  TheWorldHardestGame,
+  Snake,
   MovieDatabase,
 } from "@/const/project"
 
@@ -30,10 +30,10 @@ const Projects = () => {
               tech={MovieDatabase.technologyMain}
             />
             <ProjectsCard
-              title={TheWorldHardestGame.title}
-              img={TheWorldHardestGame.imgUrl}
-              projectUrl="/projects/theWorldHardestGame"
-              tech={TheWorldHardestGame.technologyMain}
+              title={Snake.title}
+              img={Snake.imgUrl}
+              projectUrl="/projects/snake"
+              tech={Snake.technologyMain}
             />
           </div>
       </div>

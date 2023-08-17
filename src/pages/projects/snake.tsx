@@ -1,10 +1,10 @@
 import React from 'react'
-import { TheWorldHardestGame } from '@/const/project'
+import { Snake} from '@/const/project'
 import Image from 'next/image'
 import {RiRadioButtonFill} from 'react-icons/ri'
 import Link from 'next/link'
 
-const theWorldHardestGame = () => {
+const snake = () => {
   return (
     <div className='w-full'>
         <div className='w-screen h-[30vh] lg:h-[40vh] relative'>
@@ -13,12 +13,12 @@ const theWorldHardestGame = () => {
                 className="absolute z-1"
                 layout="fill"
                 objectFit="cover"
-                src={TheWorldHardestGame.imgUrl}
+                src={Snake.imgUrl}
                 alt="/"
             />
             <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white p-2 z-10'>
-                <h2 className='py-2'>{TheWorldHardestGame.title}</h2>
-                <h3>{TheWorldHardestGame.technologyMain}</h3>
+                <h2 className='py-2'>{Snake.title}</h2>
+                <h3>{Snake.technologyMain}</h3>
             </div>
         </div>
 
@@ -26,8 +26,8 @@ const theWorldHardestGame = () => {
             <div className='col-span-4'>
                 <p>Project</p>
                 <h2>Overview</h2>
-                <p>{TheWorldHardestGame.description}</p>
-                <Link href={TheWorldHardestGame.codeUrl} target="_blank" rel="noreferrer">
+                <p>{Snake.description}</p>
+                <Link href={Snake.codeUrl} target="_blank" rel="noreferrer">
                     <button className='px-8 py-2 mt-4 mr-8'>Code</button>
                 </Link>
             </div>
@@ -35,7 +35,7 @@ const theWorldHardestGame = () => {
                 <div className='p-2'>
                     <p className='text-center font-bold pb-2'>Technologies</p>
                     <div className='grid grid-cols-3 md:grid-cols-1'>
-                        {TheWorldHardestGame.technologyAll.map((technology, index) => (
+                        {Snake.technologyAll.map((technology, index) => (
                             <p key={index} className='text-gray-600 py-2 flex items-center'>
                                 <RiRadioButtonFill className='pr-1'/>
                                 {technology}
@@ -53,4 +53,4 @@ const theWorldHardestGame = () => {
   )
 }
 
-export default theWorldHardestGame
+export default snake

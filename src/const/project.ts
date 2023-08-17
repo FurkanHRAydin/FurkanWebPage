@@ -1,5 +1,5 @@
 import chessScene from "../assets/projcets/chess_scene.png";
-import TWHG from "../assets/projcets/the_worlds_hardest_game.png";
+import snake from "../assets/projcets/Snake.png";
 import movieDB from "../assets/projcets/movie_database.png";
 
 import { Project } from "@/models/Project";
@@ -25,11 +25,11 @@ export const MovieDatabase: Project = {
     technologyAll: ["Java", "Hibernate", "Jakarta", "Swing"],
   };
 
-  export const TheWorldHardestGame: Project = {
-    imgUrl: TWHG,
-    title: "The World Hardest Game",
+  export const Snake: Project = {
+    imgUrl: snake,
+    title: "Snake",
     technologyMain: "Java / JavaFX",
-    description: `A variation of the popular browser game The World Hardest Game in a matrix version implemented in Java with JavaFX.`,
+    description: `A variation of the popular game Snake in a matrix version implemented in Java with JavaFX.`,
     codeUrl: "https://github.com/FurkanHRAydin/University/tree/main/Semester%203/Snake/src/application",
     demoUrl: "",
     technologyAll: ["Java", "JavaFX"],
